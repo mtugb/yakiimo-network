@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id "xyz.jpenilla.run-paper" version "3.1.0"
 }
 
 repositories {
@@ -53,4 +54,14 @@ tasks.named('test') {
 jar {
     archiveBaseName = 'server-core'
     archiveVersion = '0.0.1'
+}
+
+tasks {
+    runServer {
+        minecraftVersion("26.2")
+        downloadPlugins {
+            hangar("Multiverse-Core", "5.8.1")
+            // 他に modrinth(id, version) / github(owner, repo, tag, assetName) / url(urlString) も使える
+        }
+    }
 }

@@ -2,4 +2,4 @@ name: server-core
 version: 0.0.1
 main: win.yakiimo.App
 api-version: '26.2'
-depend: ['multiverse-core']
+depend: ['Multiverse-Core']

@@ -6,3 +6,6 @@ build
 
 # Ignore Kotlin plugin data
 .kotlin
+
+# Ignore the runServer working directory (server jar, downloaded plugins, world data, logs, etc.)
+app/run
